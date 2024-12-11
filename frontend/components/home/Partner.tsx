@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface PartnerLogo {
   id: number;
@@ -310,10 +311,12 @@ const InfiniteScrollRow: React.FC<InfiniteScrollRowProps> = ({
               <div className="relative z-20 h-full w-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover/card:opacity-100">
                 <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50 flex items-center justify-center p-4">
                   {/* Logo Image with Glow Hover Effect */}
-                  <img
+                  <Image
                     src={logo.src}
                     alt={logo.name}
                     className="max-h-24 max-w-24 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
+                    width={96}
+                    height={96}
                   />
                 </div>
               </div>
@@ -331,10 +334,12 @@ const InfiniteScrollRow: React.FC<InfiniteScrollRowProps> = ({
               <div className="relative z-20 h-full w-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover/card:opacity-100">
                 <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50 flex items-center justify-center p-4">
                   {/* Logo Image with Glow Hover Effect */}
-                  <img
+                  <Image
                     src={logo.src}
                     alt={logo.name}
                     className="max-h-24 max-w-24 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
+                    width={96}
+                    height={96}
                   />
                 </div>
               </div>
