@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "JobHub - Your Gateway to Career Success",
+  title: "PaddleLift - Your Gateway to Career Success",
   description:
     "Find your dream job with JobHub, the premier job search platform.",
 };

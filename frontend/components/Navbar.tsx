@@ -47,7 +47,7 @@ const Navbar = () => {
                   fill="#111B21"
                 />
               </svg>
-              <span className="text-white font-bold">Proactiv</span>
+              <span className="text-white font-bold">PaddleLift</span>
             </Link>
             <div className="flex items-center gap-1.5">
               <Link
@@ -110,7 +110,7 @@ const Navbar = () => {
                 fill="#111B21"
               />
             </svg>
-            <span className="text-white font-bold">Proactiv</span>
+            <span className="text-white font-bold">PaddleLift</span>
           </Link>
           <svg
             stroke="currentColor"
