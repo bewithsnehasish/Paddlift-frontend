@@ -134,8 +134,8 @@ const partnerLogos = [
   },
   {
     id: 22,
-    src: "/Partner Logos/Reevoy.png",
-    name: "Reevoy",
+    src: "/Partner Logos/Reevooy.png",
+    name: "Reevooy",
     originalColor: "rgb(255,255,255)",
   },
   {
