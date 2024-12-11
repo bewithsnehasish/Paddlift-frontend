@@ -19,12 +19,13 @@ export default function Spotlight({
   const [boxes, setBoxes] = useState<Array<HTMLElement>>([]);
 
   useEffect(() => {
-    containerRef.current &&
+    if (containerRef.current) {
       setBoxes(
         Array.from(containerRef.current.children).map(
           (el) => el as HTMLElement,
         ),
       );
+    }
   }, []);
 
   useEffect(() => {
