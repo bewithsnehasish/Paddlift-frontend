@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`max-w-7xl fixed top-4 mx-auto inset-x-0 z-90 transition-all duration-300 ${
+      className={`max-w-7xl fixed top-4 mx-auto inset-x-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "w-[90%] bg-black/50 border border-white"
           : "w-[95%] bg-transparent"
