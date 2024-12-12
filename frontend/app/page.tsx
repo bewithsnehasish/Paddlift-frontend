@@ -13,7 +13,6 @@ export default function Home() {
       <Features />
       <PartnersSection />
       <CompanyTimeline />
-      <Footer />
     </div>
   );
 }

@@ -134,7 +134,7 @@ const partnerLogos = [
   },
   {
     id: 22,
-    src: "/Partner Logos/Reevooy.png",
+    src: "/Partner Logos/Reevooy.jfif",
     name: "Reevooy",
     originalColor: "rgb(255,255,255)",
   },
@@ -314,7 +314,7 @@ const InfiniteScrollRow: React.FC<InfiniteScrollRowProps> = ({
                   <Image
                     src={logo.src}
                     alt={logo.name}
-                    className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
+                    className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-2xl group-hover:shadow-indigo-500/75 transition-transform duration-500"
                     width={96}
                     height={96}
                   />
@@ -337,7 +337,7 @@ const InfiniteScrollRow: React.FC<InfiniteScrollRowProps> = ({
                   <Image
                     src={logo.src}
                     alt={logo.name}
-                    className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
+                    className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-2xl group-hover:shadow-indigo-500/75 transition-transform duration-500"
                     width={96}
                     height={96}
                   />

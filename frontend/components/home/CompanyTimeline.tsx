@@ -17,6 +17,7 @@ export default function CompanyTimeline() {
                 <Image
                   src="/Foundation.gif"
                   alt="startup template"
+                  unoptimized
                   width={500}
                   height={500}
                   className="rounded-lg mt-4 object-cover h-72 w-full max-w-2xl"
@@ -37,6 +38,7 @@ export default function CompanyTimeline() {
                 <Image
                   src="/Momentum.gif"
                   alt="startup template"
+                  unoptimized
                   width={500}
                   height={500}
                   className="rounded-lg mt-4 object-cover h-72 w-full max-w-2xl"
@@ -57,6 +59,7 @@ export default function CompanyTimeline() {
                 <Image
                   src="/Resilience.gif"
                   alt="startup template"
+                  unoptimized
                   width={500}
                   height={500}
                   className="rounded-lg mt-4 object-cover h-72 w-full max-w-2xl"
@@ -78,6 +81,7 @@ export default function CompanyTimeline() {
                 <Image
                   src="/Gexpansion.gif"
                   alt="startup template"
+                  unoptimized
                   width={500}
                   height={500}
                   className="rounded-lg mt-4 object-cover h-72 w-full max-w-2xl"
@@ -98,6 +102,7 @@ export default function CompanyTimeline() {
                 <Image
                   src="/SHeights.gif"
                   alt="startup template"
+                  unoptimized
                   width={500}
                   height={500}
                   className="rounded-lg mt-4 object-cover h-72 w-full max-w-2xl"

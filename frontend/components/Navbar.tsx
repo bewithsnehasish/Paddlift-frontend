@@ -158,7 +158,7 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-col items-start w-full pl-6 space-y-6">
-            <Link href="/About" className="text-white">
+            <Link href="/about" className="text-white">
               About Us
             </Link>
             <Link href="/contact" className="text-white">

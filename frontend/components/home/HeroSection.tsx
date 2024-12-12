@@ -12,7 +12,7 @@ export default function HeroSection() {
     <section className="min-h-screen flex items-center justify-center relative">
       {/* Animated Grid Pattern */}
       <AnimatedGridPattern
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-gray-900"
         width={40}
         height={40}
         numSquares={200}

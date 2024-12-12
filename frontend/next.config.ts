@@ -3,7 +3,18 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["assets.aceternity.com", "picsum.photos"], // Add the required hostname
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "assets.aceternity.com",
+        pathname: "/**", // Allow all paths from this domain
+      },
+      {
+        protocol: "https",
+        hostname: "picsum.photos",
+        pathname: "/**", // Allow all paths from this domain
+      },
+    ],
   },
 };
 

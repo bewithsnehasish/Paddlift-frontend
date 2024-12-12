@@ -71,7 +71,6 @@ const services = [
 export default function AboutPage() {
   return (
     <AnimatedGradient>
-      <Navbar />
       {/* Header Section */}
       <section className="relative py-20 text-center">
         <BackgroundBeams />
@@ -233,9 +232,6 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
-
-      {/* Footer Section */}
-      <Footer />
     </AnimatedGradient>
   );
 }
