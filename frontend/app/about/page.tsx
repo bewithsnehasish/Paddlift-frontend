@@ -192,8 +192,9 @@ export default function AboutPage() {
             <Card className="bg-gray-800/50 border-0">
               <CardContent className="p-6">
                 <p className="text-gray-400 italic mb-4">
-                  "The team at JobHub has been instrumental in our growth. Their
-                  innovative solutions have streamlined our hiring process."
+                  &quot;The team at JobHub has been instrumental in our growth.
+                  Their innovative solutions have streamlined our hiring
+                  process.&quot;
                 </p>
                 <p className="text-gray-300">
                   - Alex Thompson, Tech Innovators Inc
@@ -203,8 +204,8 @@ export default function AboutPage() {
             <Card className="bg-gray-800/50 border-0">
               <CardContent className="p-6">
                 <p className="text-gray-400 italic mb-4">
-                  "Working with JobHub has been a game changer for our HR
-                  operations."
+                  &quot;Working with JobHub has been a game changer for our HR
+                  operations.&quot;
                 </p>
                 <p className="text-gray-300">
                   - Sarah Chen, Global Solutions Ltd
