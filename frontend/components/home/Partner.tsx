@@ -314,7 +314,7 @@ const InfiniteScrollRow: React.FC<InfiniteScrollRowProps> = ({
                   <Image
                     src={logo.src}
                     alt={logo.name}
-                    className="max-h-24 max-w-24 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
+                    className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
                     width={96}
                     height={96}
                   />
@@ -337,7 +337,7 @@ const InfiniteScrollRow: React.FC<InfiniteScrollRowProps> = ({
                   <Image
                     src={logo.src}
                     alt={logo.name}
-                    className="max-h-24 max-w-24 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
+                    className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
                     width={96}
                     height={96}
                   />

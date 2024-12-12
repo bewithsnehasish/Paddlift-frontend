@@ -54,17 +54,18 @@ const Navbar = () => {
             </Link>
             <div className="flex items-center gap-1.5">
               <Link
-                href="/features"
+                href="/about"
                 className="flex items-center justify-center text-sm leading-[110%] px-4 py-2 rounded-md hover:bg-neutral-800 hover:text-white/80 text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200"
               >
-                Features
+                About Us
               </Link>
               <Link
-                href="/pricing"
+                href="/contact"
                 className="flex items-center justify-center text-sm leading-[110%] px-4 py-2 rounded-md hover:bg-neutral-800 hover:text-white/80 text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200"
               >
-                Pricing
+                Contact Us
               </Link>
+              {/*
               <Link
                 href="/blog"
                 className="flex items-center justify-center text-sm leading-[110%] px-4 py-2 rounded-md hover:bg-neutral-800 hover:text-white/80 text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200"
@@ -77,6 +78,7 @@ const Navbar = () => {
               >
                 Contact
               </Link>
+              */}
             </div>
           </div>
           <div className="flex space-x-2 items-center">
@@ -156,12 +158,13 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-col items-start w-full pl-6 space-y-6">
-            <Link href="/features" className="text-white">
-              Features
+            <Link href="/About" className="text-white">
+              About Us
             </Link>
-            <Link href="/pricing" className="text-white">
-              Pricing
+            <Link href="/contact" className="text-white">
+              Contact
             </Link>
+            {/*       
             <Link href="/blog" className="text-white">
               Blog
             </Link>
@@ -171,6 +174,7 @@ const Navbar = () => {
             <Link href="/register" className="text-white">
               Register
             </Link>
+            */}
             <button className="text-white">Job List</button>
           </div>
         </div>

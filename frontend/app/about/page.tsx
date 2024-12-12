@@ -76,8 +76,8 @@ export default function AboutPage() {
       <section className="relative py-20 text-center">
         <BackgroundBeams />
         <div className="relative z-10 container mx-auto px-8">
-          <h1 className="text-5xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-            About JobHub
+          <h1 className="text-5xl font-extrabold mb-8 bg-clip-text text-white">
+            About <span className="text-red-600">PaddleLift</span>
           </h1>
           <p className="text-xl leading-relaxed max-w-3xl mx-auto text-gray-300 mb-8">
             Transforming HR & Recruitment through innovation, collaboration, and
