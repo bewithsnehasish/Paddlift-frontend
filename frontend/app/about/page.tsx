@@ -119,7 +119,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-center mb-12">
             Founders & Leadership
           </h2>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {teamMembers.map((member) => (
               <TeamMemberCard
                 key={member.name}
