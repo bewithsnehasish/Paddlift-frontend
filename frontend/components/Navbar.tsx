@@ -82,12 +82,14 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex space-x-2 items-center">
-            <Link
+            {/*
+           <Link
               href="/register"
               className="group hover:-translate-y-0.5 active:scale-[0.98] relative z-10 bg-transparent hover:border-secondary hover:bg-secondary/50 border border-transparent text-white text-sm md:text-sm transition font-medium duration-200 rounded-md px-4 py-2 flex items-center justify-center"
             >
               Register
             </Link>
+            */}
             <button className="group hover:-translate-y-0.5 active:scale-[0.98] bg-blue-700 text-white relative z-10 hover:bg-blue-700/90 border border-secondary text-sm md:text-sm transition font-medium duration-200 rounded-md px-4 py-2 flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF60_inset,_0px_1px_0px_0px_#FFFFFF60_inset]">
               Job List
             </button>
