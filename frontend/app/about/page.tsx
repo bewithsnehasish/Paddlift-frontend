@@ -5,9 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { AnimatedGradient } from "@/components/ui/animated-gradient";
-import Footer from "@/components/Footer";
 import { TeamMemberCard } from "@/components/ui/GradientCard";
-import Navbar from "@/components/Navbar";
 
 const teamMembers = [
   {

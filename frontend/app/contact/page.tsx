@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,6 +25,46 @@ export default function ContactPage() {
       other: false,
     },
   });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  const handleServiceChange = (
+    serviceId: keyof (typeof formData)["services"],
+  ) => {
+    setFormData((prev) => ({
+      ...prev,
+      services: {
+        ...prev.services,
+        [serviceId]: !prev.services[serviceId],
+      },
+    }));
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Validate form data
+    const selectedServices = Object.entries(formData.services)
+      .filter((entry) => entry[1]) // Use the second element of the entry directly
+      .map(([service]) => service);
+
+    if (!formData.firstName || !formData.lastName || !formData.email) {
+      alert("Please fill in required fields");
+      return;
+    }
+
+    // Here you would typically send the data to a backend
+    console.log("Form submitted:", {
+      ...formData,
+      selectedServices,
+    });
+  };
 
   return (
     <div className="flex min-h-screen w-full bg-black/[0.96] antialiased bg-grid-white/[0.02] relative mt-24">
@@ -124,7 +164,10 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <form className="space-y-6 bg-black/40 border border-neutral-800 rounded-lg backdrop-blur-sm p-6">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 bg-black/40 border border-neutral-800 rounded-lg backdrop-blur-sm p-6"
+            >
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="firstName" className="text-neutral-200">
@@ -132,6 +175,8 @@ export default function ContactPage() {
                   </Label>
                   <Input
                     id="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
                     placeholder="Enter your first name"
                     className="bg-neutral-950 border-neutral-800 text-neutral-200 placeholder:text-neutral-500"
                   />
@@ -142,6 +187,8 @@ export default function ContactPage() {
                   </Label>
                   <Input
                     id="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
                     placeholder="Enter your last name"
                     className="bg-neutral-950 border-neutral-800 text-neutral-200 placeholder:text-neutral-500"
                   />
@@ -155,6 +202,8 @@ export default function ContactPage() {
                 <Input
                   id="email"
                   type="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder="you@company.com"
                   className="bg-neutral-950 border-neutral-800 text-neutral-200 placeholder:text-neutral-500"
                 />
@@ -167,7 +216,9 @@ export default function ContactPage() {
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="+1 (555) 000-0000"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="+91 (555) 000-0000"
                   className="bg-neutral-950 border-neutral-800 text-neutral-200 placeholder:text-neutral-500"
                 />
               </div>
@@ -175,23 +226,27 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <Label className="text-neutral-200">Services</Label>
                 <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { id: "webDesign", label: "Website design" },
-                    { id: "uxDesign", label: "UX design" },
-                    { id: "userResearch", label: "User research" },
-                    { id: "contentCreation", label: "Content creation" },
-                    {
-                      id: "strategyConsulting",
-                      label: "Strategy & consulting",
-                    },
-                    { id: "other", label: "Other" },
-                  ].map((service) => (
+                  {(
+                    [
+                      { id: "webDesign", label: "Website design" },
+                      { id: "uxDesign", label: "UX design" },
+                      { id: "userResearch", label: "User research" },
+                      { id: "contentCreation", label: "Content creation" },
+                      {
+                        id: "strategyConsulting",
+                        label: "Strategy & consulting",
+                      },
+                      { id: "other", label: "Other" },
+                    ] as const
+                  ).map((service) => (
                     <div
                       key={service.id}
                       className="flex items-center space-x-2"
                     >
                       <Checkbox
                         id={service.id}
+                        checked={formData.services[service.id]}
+                        onCheckedChange={() => handleServiceChange(service.id)}
                         className="border-neutral-700 data-[state=checked]:bg-primary"
                       />
                       <label
@@ -205,14 +260,16 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button
+                type="submit"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
                 Send message
               </Button>
             </form>
           </motion.div>
         </div>
       </div>
-
       {/* Right Section - Full Map */}
       <div className="w-1/2 hidden lg:block">
         <div className="h-full w-full">

@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import CompanyTimeline from "@/components/home/CompanyTimeline";
 import HeroSection from "@/components/home/HeroSection";
 import PartnersSection from "@/components/home/Partner";
