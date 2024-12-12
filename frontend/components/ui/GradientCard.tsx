@@ -20,7 +20,6 @@ interface TeamMemberCardProps {
 const PinContainer = ({
   children,
   title,
-  href,
   className,
   containerClassName,
 }: {
