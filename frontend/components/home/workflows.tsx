@@ -4,12 +4,10 @@ import WorflowImg02 from "@/public/images/workflow-02.png";
 import WorflowImg03 from "@/public/images/workflow-03.png";
 import WorflowImg04 from "@/public/images/workflow-04.png";
 import Spotlight from "../ui/spotlight";
-import GradientParticles from "../ui/GradientParticles";
 
 export default function Workflows() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-black via-indigo-950 to-gray-950 pb-10 md:pb-20">
-      <GradientParticles />
       <div className="relative z-10 px-4 sm:px-6 lg:mx-auto lg:max-w-full">
         <div className="pb-8 md:pb-16">
           {/* Section header */}
