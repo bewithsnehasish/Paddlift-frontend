@@ -15,7 +15,7 @@ const teamMembers = [
     description:
       "Driving the company vision and strategy with a focus on growth and innovation.",
     about:
-      "Driving the company vision and strategy with a focus on growth and innovation.",
+      "The team at JobHub has been instrumental in our growth. Their innovative solutions have streamlined our hiring process.The team at JobHub has been instrumental in our growth. Their innovative solutions have streamlined our hiring process.",
     socials: {
       linkedin: "https://linkedin.com/in/sarahjohnson",
       twitter: "https://twitter.com/sarahjohnson",
@@ -28,6 +28,8 @@ const teamMembers = [
     imageUrl: "https://picsum.photos/200/300?grayscale&random=2",
     description:
       "Leading our technical teams and ensuring the implementation of cutting-edge technologies.",
+    about:
+      "The team at JobHub has been instrumental in our growth. Their innovative solutions have streamlined our hiring process.The team at JobHub has been instrumental in our growth. Their innovative solutions have streamlined our hiring process.",
     socials: {
       linkedin: "https://linkedin.com/in/michaelchen",
       twitter: "https://twitter.com/michaelchen",
@@ -40,6 +42,8 @@ const teamMembers = [
     imageUrl: "https://picsum.photos/200/300?grayscale&random=3",
     description:
       "Overseeing daily operations and ensuring smooth collaboration across all teams.",
+    about:
+      "The team at JobHub has been instrumental in our growth. Their innovative solutions have streamlined our hiring process.The team at JobHub has been instrumental in our growth. Their innovative solutions have streamlined our hiring process.",
     socials: {
       linkedin: "https://linkedin.com/in/emilyrodriguez",
       twitter: "https://twitter.com/emilyrodriguez",
@@ -52,6 +56,8 @@ const teamMembers = [
     imageUrl: "https://picsum.photos/200/300?grayscale&random=3",
     description:
       "Overseeing daily operations and ensuring smooth collaboration across all teams.",
+    about:
+      "The team at JobHub has been instrumental in our growth. Their innovative solutions have streamlined our hiring process.The team at JobHub has been instrumental in our growth. Their innovative solutions have streamlined our hiring process.",
     socials: {
       linkedin: "https://linkedin.com/in/",
       twitter: "https://twitter.com/",

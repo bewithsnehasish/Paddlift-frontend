@@ -84,16 +84,18 @@ const PinPerspective = ({
     <motion.div className="pointer-events-none w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500 max-w-full">
       <div className="w-full h-full -mt-7 flex-none inset-0">
         {about && (
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-xs">
-            <div className="bg-white dark:bg-neutral-900 rounded-xl shadow-2xl p-6 border border-neutral-200 dark:border-neutral-800">
-              <div className="absolute top-4 left-4 flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10">
-                <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5">
-                  {title}
-                </span>
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-xs">
+            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-full max-w-xs">
+              <div className="bg-white dark:bg-neutral-900 rounded-xl shadow-2xl p-6 border border-neutral-200 dark:border-neutral-800">
+                <div className="absolute top-4 left-4 flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10">
+                  <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5">
+                    {title}
+                  </span>
+                </div>
+                <p className="text-neutral-700 dark:text-neutral-300 text-sm mt-8">
+                  {about}
+                </p>
               </div>
-              <p className="text-neutral-700 dark:text-neutral-300 text-sm mt-8">
-                {about}
-              </p>
             </div>
           </div>
         )}
