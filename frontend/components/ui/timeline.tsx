@@ -3,6 +3,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
+  year: number;
   title: string;
   content: React.ReactNode;
 }
@@ -36,7 +37,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white max-w-2xl leading-[110%]">
           <span className="text-blue-500">Timeline</span> from Our Journey
         </h2>
-        <p className="text-neutral-400 text-sm md:text-base max-w-sm">
+        <p className="text-white text-xl md:text-base max-w-lg">
           Paddlelift Pvt Ltd, established during a challenging global period,
           has rapidly grown to become a leading name in the recruitment and HR
           industry. The company has experienced significant growth, overcoming
@@ -58,12 +59,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <div className="h-4 w-4 rounded-full bg-[#0D1124] border border-[#2B2E47] p-2" />
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-400">
-                {item.title}
+                {item.year}
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
+            <div className="relative pl-20 pr-4 md:pl-4 w-full text-lg">
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-400">
+                {item.title}
+              </h3>
+              <h3 className="block text-4xl mb-4 text-left font-bold text-neutral-400">
                 {item.title}
               </h3>
               {item.content}{" "}

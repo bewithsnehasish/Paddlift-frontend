@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Timeline } from "../ui/timeline";
 
 export default function CompanyTimeline() {
@@ -6,6 +5,7 @@ export default function CompanyTimeline() {
     <Timeline
       data={[
         {
+          year: 2020,
           title: "The Foundation",
           content: (
             <div>
@@ -13,20 +13,11 @@ export default function CompanyTimeline() {
                 Launched during the COVID-19 pandemic, offering essential
                 recruitment services to founders in need of quality manpower.
               </p>
-              <div className="flex justify-center">
-                <Image
-                  src="/Foundation.gif"
-                  alt="startup template"
-                  unoptimized
-                  width={500}
-                  height={500}
-                  className="rounded-lg mt-4 object-cover h-72 w-full max-w-2xl"
-                />
-              </div>
             </div>
           ),
         },
         {
+          year: 2021,
           title: "Momentum",
           content: (
             <div className="">
@@ -34,20 +25,11 @@ export default function CompanyTimeline() {
                 Achieved significant momentum with a high repeat customer ratio
                 and strong word-of-mouth publicity
               </p>
-              <div className="flex justify-center">
-                <Image
-                  src="/Momentum.gif"
-                  alt="startup template"
-                  unoptimized
-                  width={500}
-                  height={500}
-                  className="rounded-lg mt-4 object-cover h-72 w-full max-w-2xl"
-                />
-              </div>
             </div>
           ),
         },
         {
+          year: 2022,
           title: "Resilience",
           content: (
             <>
@@ -55,20 +37,11 @@ export default function CompanyTimeline() {
                 Strategically managed market slowdowns and economic challenges,
                 ensuring stability and continued service excellence.
               </p>
-              <div className="flex justify-center">
-                <Image
-                  src="/Resilience.gif"
-                  alt="startup template"
-                  unoptimized
-                  width={500}
-                  height={500}
-                  className="rounded-lg mt-4 object-cover h-72 w-full max-w-2xl"
-                />
-              </div>
             </>
           ),
         },
         {
+          year: 2023,
           title: "Global Expansion",
           content: (
             <>
@@ -77,20 +50,11 @@ export default function CompanyTimeline() {
                 Australia, Africa, and the Middle East despite market
                 turbulence.
               </p>
-              <div className="flex justify-center">
-                <Image
-                  src="/Gexpansion.gif"
-                  alt="startup template"
-                  unoptimized
-                  width={500}
-                  height={500}
-                  className="rounded-lg mt-4 object-cover h-72 w-full max-w-2xl"
-                />
-              </div>
             </>
           ),
         },
         {
+          year: 2024,
           title: "Scaling Heights",
           content: (
             <>
@@ -98,16 +62,6 @@ export default function CompanyTimeline() {
                 Continued to grow by diversifying services and strengthening
                 market position, focusing on innovation and client satisfaction.
               </p>
-              <div className="flex justify-center">
-                <Image
-                  src="/SHeights.gif"
-                  alt="startup template"
-                  unoptimized
-                  width={500}
-                  height={500}
-                  className="rounded-lg mt-4 object-cover h-72 w-full max-w-2xl"
-                />
-              </div>
             </>
           ),
         },

@@ -8,6 +8,7 @@ interface TeamMemberCardProps {
   position: string;
   imageUrl: string;
   description?: string;
+  about?: string;
   socials?: {
     linkedin?: string;
     twitter?: string;
@@ -20,11 +21,13 @@ interface TeamMemberCardProps {
 const PinContainer = ({
   children,
   title,
+  about,
   className,
   containerClassName,
 }: {
   children: React.ReactNode;
   title?: string;
+  about?: string;
   href?: string;
   className?: string;
   containerClassName?: string;
@@ -65,24 +68,47 @@ const PinContainer = ({
           <div className={cn("relative z-40", className)}>{children}</div>
         </div>
       </div>
-      <PinPerspective title={title} />
+      <PinPerspective title={title} about={about} />
     </div>
   );
 };
 
-const PinPerspective = ({ title }: { title?: string }) => {
+const PinPerspective = ({
+  title,
+  about,
+}: {
+  title?: string;
+  about?: string;
+}) => {
   return (
     <motion.div className="pointer-events-none w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500 max-w-full">
       <div className="w-full h-full -mt-7 flex-none inset-0">
-        <div className="absolute top-0 inset-x-0 flex justify-center">
-          <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10">
-            <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5">
-              {title}
-            </span>
-
-            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>
+        {about && (
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-xs">
+            <div className="bg-white dark:bg-neutral-900 rounded-xl shadow-2xl p-6 border border-neutral-200 dark:border-neutral-800">
+              <div className="absolute top-4 left-4 flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10">
+                <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5">
+                  {title}
+                </span>
+              </div>
+              <p className="text-neutral-700 dark:text-neutral-300 text-sm mt-8">
+                {about}
+              </p>
+            </div>
           </div>
-        </div>
+        )}
+
+        {!about && (
+          <div className="absolute top-0 inset-x-0 flex justify-center">
+            <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10">
+              <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5">
+                {title}
+              </span>
+
+              <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>
+            </div>
+          </div>
+        )}
 
         <div
           style={{
@@ -128,6 +154,7 @@ const PinPerspective = ({ title }: { title?: string }) => {
   );
 };
 
+// The rest of the code remains the same, just update the export to include the `about` prop
 const BackgroundGradient = ({
   children,
   className,
@@ -203,12 +230,13 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   position,
   imageUrl,
   description,
+  about,
   socials,
   animate = true,
   href,
 }) => {
   return (
-    <PinContainer title={name} href={href}>
+    <PinContainer title={name} about={about} href={href}>
       <BackgroundGradient
         containerClassName="w-full max-w-sm mx-auto"
         animate={animate}

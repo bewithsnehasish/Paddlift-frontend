@@ -48,12 +48,6 @@ const partnerLogos = [
     originalColor: "rgb(0, 0, 255)",
   },
   {
-    id: 8,
-    src: "/Partner Logos/Whitehat.jfif",
-    name: "Whitehat",
-    originalColor: "rgb(0, 0, 255)",
-  },
-  {
     id: 9,
     src: "/Partner Logos/liquiloans.png",
     name: "liquiloans",
@@ -81,12 +75,6 @@ const partnerLogos = [
     id: 14,
     src: "/Partner Logos/Otipy.png",
     name: "Otipy",
-    originalColor: "rgb(0, 0, 255)",
-  },
-  {
-    id: 15,
-    src: "/Partner Logos/Otipy Green.jfif",
-    name: "Otipy Green",
     originalColor: "rgb(0, 0, 255)",
   },
   {
@@ -124,12 +112,6 @@ const partnerLogos = [
     src: "/Partner Logos/Eureka Forbes.png",
     name: "Eureka Forbes",
     originalColor: "rgb(0, 0, 255)",
-  },
-  {
-    id: 22,
-    src: "/Partner Logos/Reevooy.jfif",
-    name: "Reevooy",
-    originalColor: "rgb(255,255,255)",
   },
   {
     id: 23,

@@ -7,21 +7,34 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
+      const currentScrollY = window.scrollY;
+
+      // Determine scroll direction and set visibility
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        if (currentScrollY > 100) {
+          setIsVisible(false);
+        }
       } else {
-        setIsScrolled(false);
+        // Scrolling up
+        setIsVisible(true);
       }
+
+      // Update scroll state and last scroll position
+      setIsScrolled(currentScrollY > 0);
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -30,9 +43,12 @@ const Navbar = () => {
   return (
     <nav
       className={`max-w-7xl fixed top-4 mx-auto inset-x-0 z-50 transition-all duration-300 ${
-        isScrolled ? "w-[90%] bg-black/50 border " : "w-[95%] bg-transparent"
-      } rounded-md lg:w-full ${isScrolled ? "transform translate-y-[-4px]" : ""}`}
-      style={{ transform: "none" }}
+        isScrolled ? "w-[90%] bg-black/50 border" : "w-[95%] bg-transparent"
+      } rounded-md lg:w-full ${
+        isVisible
+          ? "translate-y-0 opacity-100"
+          : "transform -translate-y-full opacity-0"
+      }`}
     >
       <div className="hidden lg:block w-full">
         <div className="w-full flex relative justify-between px-4 py-3 rounded-md transition duration-200 mx-auto">
@@ -48,46 +64,28 @@ const Navbar = () => {
                 width={64}
                 height={64}
               />
-              <span className="text-white font-bold">PaddleLift</span>
+              <span className="text-white text-2xl font-extrabold">
+                PaddleLift
+              </span>
             </Link>
             <div className="flex items-center gap-1.5">
+              {/*
               <Link
                 href="/about"
-                className="flex items-center justify-center text-sm leading-[110%] px-4 py-2 rounded-md hover:bg-neutral-800 hover:text-white/80 text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200"
+                className="flex items-center justify-center text-lg font-bold leading-[110%] px-4 py-2 rounded-md hover:bg-neutral-800 hover:text-white/80 text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200"
               >
                 About Us
               </Link>
+              */}
               <Link
                 href="/contact"
-                className="flex items-center justify-center text-sm leading-[110%] px-4 py-2 rounded-md hover:bg-neutral-800 hover:text-white/80 text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200"
+                className="flex items-center justify-center text-lg font-bold leading-[110%] px-4 py-2 rounded-md hover:bg-neutral-800 hover:text-white/80 text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200"
               >
                 Contact Us
               </Link>
-              {/*
-              <Link
-                href="/blog"
-                className="flex items-center justify-center text-sm leading-[110%] px-4 py-2 rounded-md hover:bg-neutral-800 hover:text-white/80 text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200"
-              >
-                Blog
-              </Link>
-              <Link
-                href="/contact"
-                className="flex items-center justify-center text-sm leading-[110%] px-4 py-2 rounded-md hover:bg-neutral-800 hover:text-white/80 text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200"
-              >
-                Contact
-              </Link>
-              */}
             </div>
           </div>
           <div className="flex space-x-2 items-center">
-            {/*
-           <Link
-              href="/register"
-              className="group hover:-translate-y-0.5 active:scale-[0.98] relative z-10 bg-transparent hover:border-secondary hover:bg-secondary/50 border border-transparent text-white text-sm md:text-sm transition font-medium duration-200 rounded-md px-4 py-2 flex items-center justify-center"
-            >
-              Register
-            </Link>
-            */}
             <button className="group hover:-translate-y-0.5 active:scale-[0.98] bg-blue-700 text-white relative z-10 hover:bg-blue-700/90 border border-secondary text-sm md:text-sm transition font-medium duration-200 rounded-md px-4 py-2 flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF60_inset,_0px_1px_0px_0px_#FFFFFF60_inset]">
               Job List
             </button>
@@ -158,23 +156,14 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-col items-start w-full pl-6 space-y-6">
+            {/*
             <Link href="/about" className="text-white">
               About Us
             </Link>
-            <Link href="/contact" className="text-white">
-              Contact
-            </Link>
-            {/*       
-            <Link href="/blog" className="text-white">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-white">
-              Contact
-            </Link>
-            <Link href="/register" className="text-white">
-              Register
-            </Link>
             */}
+            <Link href="/contact" className="text-white">
+              Contact
+            </Link>
             <button className="text-white">Job List</button>
           </div>
         </div>

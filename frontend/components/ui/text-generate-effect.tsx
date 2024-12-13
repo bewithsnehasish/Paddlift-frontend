@@ -39,7 +39,7 @@ export const TextGenerateEffect = ({
               key={word + idx}
               className={`${
                 idx > 3 && idx < 8
-                  ? "text-primary"
+                  ? "text-red-600"
                   : "dark:text-white text-black"
               } opacity-0`}
               style={{

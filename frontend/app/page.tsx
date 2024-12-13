@@ -1,7 +1,7 @@
 import CompanyTimeline from "@/components/home/CompanyTimeline";
+import Features from "@/components/home/Features";
 import HeroSection from "@/components/home/HeroSection";
 import PartnersSection from "@/components/home/Partner";
-import Features from "@/components/home/Features";
 import Workflows from "@/components/home/workflows";
 
 export default function Home() {

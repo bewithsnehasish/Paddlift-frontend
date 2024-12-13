@@ -14,6 +14,8 @@ const teamMembers = [
     imageUrl: "https://picsum.photos/200/300?grayscale&random=1",
     description:
       "Driving the company vision and strategy with a focus on growth and innovation.",
+    about:
+      "Driving the company vision and strategy with a focus on growth and innovation.",
     socials: {
       linkedin: "https://linkedin.com/in/sarahjohnson",
       twitter: "https://twitter.com/sarahjohnson",
@@ -42,6 +44,18 @@ const teamMembers = [
       linkedin: "https://linkedin.com/in/emilyrodriguez",
       twitter: "https://twitter.com/emilyrodriguez",
       github: "https://github.com/emilyrodriguez",
+    },
+  },
+  {
+    name: "Sneha Singh",
+    position: "COO & Co-founder",
+    imageUrl: "https://picsum.photos/200/300?grayscale&random=3",
+    description:
+      "Overseeing daily operations and ensuring smooth collaboration across all teams.",
+    socials: {
+      linkedin: "https://linkedin.com/in/",
+      twitter: "https://twitter.com/",
+      github: "https://github.com/",
     },
   },
 ];
@@ -113,10 +127,10 @@ export default function AboutPage() {
       {/* Founders Section */}
       <section className="relative py-16">
         <div className="container mx-auto px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-20">
             Founders & Leadership
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
             {teamMembers.map((member) => (
               <TeamMemberCard
                 key={member.name}
@@ -125,6 +139,7 @@ export default function AboutPage() {
                 imageUrl={member.imageUrl}
                 description={member.description}
                 socials={member.socials}
+                about={member.about}
               />
             ))}
           </div>
