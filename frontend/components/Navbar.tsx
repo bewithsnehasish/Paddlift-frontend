@@ -39,7 +39,7 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleNavigation = (path) => {
+  const handleNavigation = (path: string) => {
     setIsMobileMenuOpen(false);
     router.push(path);
   };
