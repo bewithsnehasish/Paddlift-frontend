@@ -30,9 +30,7 @@ const Navbar = () => {
   return (
     <nav
       className={`max-w-7xl fixed top-4 mx-auto inset-x-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "w-[90%] bg-black/50 border border-white"
-          : "w-[95%] bg-transparent"
+        isScrolled ? "w-[90%] bg-black/50 border " : "w-[95%] bg-transparent"
       } rounded-md lg:w-full ${isScrolled ? "transform translate-y-[-4px]" : ""}`}
       style={{ transform: "none" }}
     >
@@ -46,9 +44,9 @@ const Navbar = () => {
               <Image
                 src="/Paddlelite Logo.png"
                 alt="Paddlelite Logo"
-                className="max-h-24 max-w-24 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
-                width={44}
-                height={44}
+                className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
+                width={64}
+                height={64}
               />
               <span className="text-white font-bold">PaddleLift</span>
             </Link>
@@ -107,7 +105,7 @@ const Navbar = () => {
             <Image
               src="/Paddlelite Logo.png"
               alt="Paddlelite Logo"
-              className="max-h-24 max-w-24 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
+              className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-indigo-500/50 transition-all duration-300"
               width={33}
               height={33}
             />

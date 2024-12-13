@@ -1,14 +1,12 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import Image from "next/image";
 
 interface PartnerLogo {
   id: number;
   src: string;
   name: string;
-  originalColor: string;
 }
 
 const partnerLogos = [
@@ -16,31 +14,26 @@ const partnerLogos = [
     id: 1,
     src: "/Partner Logos/Royal_Enfield.png",
     name: "Royal Enfield",
-    originalColor: "rgb(255, 100, 0)",
   },
   {
     id: 2,
     src: "/Partner Logos/Gruner.png",
     name: "Gruner",
-    originalColor: "rgb(0, 123, 255)",
   },
   {
     id: 3,
     src: "/Partner Logos/ITC.png",
     name: "ITC",
-    originalColor: "rgb(0, 255, 0)",
   },
   {
     id: 4,
     src: "/Partner Logos/Sanskriti.png",
     name: "Sanskriti",
-    originalColor: "rgb(255, 0, 0)",
   },
   {
     id: 5,
     src: "/Partner Logos/ximkart.png",
     name: "ximkart",
-    originalColor: "rgb(128, 0, 128)",
   },
   {
     id: 6,
@@ -217,21 +210,10 @@ const partnerLogos = [
     originalColor: "rgb(0, 0, 255)",
   },
 ];
-
-interface InfiniteScrollRowProps {
-  logos: PartnerLogo[];
-  direction?: number;
-}
-
 const PartnersSection: React.FC = () => {
-  // Divide logos into three groups
-  const row1Logos = partnerLogos.slice(0, 10);
-  const row2Logos = partnerLogos.slice(10, 20);
-  const row3Logos = partnerLogos.slice(20);
-
   return (
-    <section className="relative min-h-screen w-full overflow-hidden py-16 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-900">
-      <div className="mx-auto max-w-12xl px-4 sm:px-6 relative z-10">
+    <section className="relative py-16 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-900 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
         <div className="pb-4 md:pb-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
@@ -249,15 +231,11 @@ const PartnersSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="space-y-8">
-            {/* First row - left to right */}
-            <InfiniteScrollRow logos={row1Logos} direction={1} />
-
-            {/* Second row - right to left */}
-            <InfiniteScrollRow logos={row2Logos} direction={-1} />
-
-            {/* Third row - left to right */}
-            <InfiniteScrollRow logos={row3Logos} direction={1} />
+          {/* Marquee effect with three rows */}
+          <div className="relative overflow-hidden">
+            <MarqueeRow logos={partnerLogos} direction="left" />
+            <MarqueeRow logos={partnerLogos} direction="right" />
+            <MarqueeRow logos={partnerLogos} direction="left" />
           </div>
         </div>
       </div>
@@ -279,74 +257,42 @@ const PartnersSection: React.FC = () => {
   );
 };
 
-const InfiniteScrollRow: React.FC<InfiniteScrollRowProps> = ({
-  logos,
-  direction = 1,
-}) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+interface MarqueeRowProps {
+  logos: PartnerLogo[];
+  direction: "left" | "right";
+}
+
+const MarqueeRow: React.FC<MarqueeRowProps> = ({ logos, direction }) => {
   return (
-    <div className="overflow-hidden w-full relative">
-      <motion.div
-        ref={scrollRef}
-        className="flex"
-        animate={{
-          x:
-            direction > 0
-              ? ["-100%", "0%"] // Left to right
-              : ["0%", "-100%"], // Right to left
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: "linear",
-        }}
+    <div className="flex overflow-hidden py-8">
+      <div
+        className={`flex animate-marquee${direction === "right" ? "-reverse" : ""} gap-12`}
       >
-        <div className="flex">
-          {logos.map((logo, index) => (
-            <a
-              key={`${logo.name}-${index}`}
-              href="#"
-              className="group/card relative mx-4 flex-shrink-0 w-32 h-32 flex items-center justify-center"
-            >
-              <div className="relative z-20 h-full w-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover/card:opacity-100">
-                <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50 flex items-center justify-center p-4">
-                  {/* Logo Image with Glow Hover Effect */}
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-2xl group-hover:shadow-indigo-500/75 transition-transform duration-500"
-                    width={96}
-                    height={96}
-                  />
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-        {/* Duplicate for seamless looping */}
-        <div className="flex">
-          {logos.map((logo, index) => (
-            <a
-              key={`duplicate-${logo.name}-${index}`}
-              href="#"
-              className="group/card relative mx-4 flex-shrink-0 w-32 h-32 flex items-center justify-center"
-            >
-              <div className="relative z-20 h-full w-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover/card:opacity-100">
-                <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50 flex items-center justify-center p-4">
-                  {/* Logo Image with Glow Hover Effect */}
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-2xl group-hover:shadow-indigo-500/75 transition-transform duration-500"
-                    width={96}
-                    height={96}
-                  />
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </motion.div>
+        {[...logos, ...logos].map((logo, index) => (
+          <LogoCard key={`${logo.id}-${index}`} logo={logo} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+interface LogoCardProps {
+  logo: PartnerLogo;
+}
+
+const LogoCard: React.FC<LogoCardProps> = ({ logo }) => {
+  return (
+    <div className="group relative flex-shrink-0 w-48 h-48">
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-indigo-200 to-gray-500"></div>
+      <div className="relative z-10 h-full w-full flex items-center justify-center p-6">
+        <Image
+          src={logo.src}
+          alt={logo.name}
+          className="max-h-36 max-w-36 object-contain group-hover:scale-110 transition-transform duration-300"
+          width={144}
+          height={144}
+        />
+      </div>
     </div>
   );
 };
