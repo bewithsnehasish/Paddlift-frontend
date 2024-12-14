@@ -22,9 +22,10 @@ export default function CompanyTimeline() {
           title: "Momentum",
           content: (
             <div className="">
-              <p className="text-lg text-center">
+              <p className="">
                 Achieved significant momentum with a high repeat customer ratio
-                and strong word-of-mouth publicity
+                and strong word-of-mouth publicity. We are a trusted partner in
+                the industry.
               </p>
             </div>
           ),

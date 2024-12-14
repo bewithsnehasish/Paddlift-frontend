@@ -36,7 +36,7 @@ export default function Features() {
           <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
               <span className="inline-flex bg-gradient-to-r from-pink-500 to-indigo-500 bg-clip-text text-xl font-bold text-transparent">
-                Why Choose Us ?
+                USP
               </span>
             </div>
 
@@ -98,9 +98,9 @@ export default function Features() {
                 Proven Success
               </h3>
               <p className="text-lg text-white">
-                Our deep industry insights and dedication to excellence have
-                consistently delivered high-quality talent & HR practices,
-                positioning our clients for unprecedented success.
+                We do not just only provide candidates, we promote our
+                client&apos;s branding amongst the market and pull out the
+                best-fit talent who will be eligible to get hired.
               </p>
             </article>
             <article>
@@ -120,9 +120,9 @@ export default function Features() {
                 Personalized Approach
               </h3>
               <p className="text-lg text-white">
-                We do not just only provide candidates, we promotes customer’s
-                branding amongst the market and pull out crème who will be
-                eligible to get hired.
+                We masterfully guide you from initial team setup (0 to 1)
+                through rapid scaling (1 to 100), ensuring your hires align with
+                your vision & fuel your expansion.
               </p>
             </article>
             <article>
@@ -148,7 +148,8 @@ export default function Features() {
               </h3>
               <p className="text-lg text-white">
                 Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
+                balance for the user, privacy and security. We are a trusted
+                partner in the industry.
               </p>
             </article>
             <article>
@@ -186,11 +187,12 @@ export default function Features() {
                 <path d="M19.406 3.844 6.083 20.497.586 15 2 13.586l3.917 3.917L17.844 2.595l1.562 1.25Z" />
               </svg>
               <h3 className="mb-1 font-nacelle text-2xl font-bold text-gray-200 pb-2">
-                Unified Timeline
+                Expert Team
               </h3>
               <p className="text-lg text-white">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
+                Our deep industry insights and dedication to excellence have
+                consistently delivered high-quality talent & HR practices,
+                positioning our clients for unprecedented success.
               </p>
             </article>
           </div>
