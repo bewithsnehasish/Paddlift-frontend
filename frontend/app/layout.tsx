@@ -9,6 +9,15 @@ export const metadata = {
   title: "PaddleLift - Your Gateway to Career Success",
   description:
     "Find your dream job with JobHub, the premier job search platform.",
+  icons: {
+    icon: "/favicon_io/favicon.ico",
+    shortcut: "/favicon_io/favicon.ico",
+    apple: "/favicon_io/apple-touch-icon.png",
+    other: {
+      rel: "apple-touch-icon-precomposed",
+      url: "/favicon_io/apple-touch-icon.png",
+    },
+  },
 };
 
 export default function RootLayout({

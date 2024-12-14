@@ -80,7 +80,7 @@ const Footer = () => {
         <BackgroundBeams className="hidden sm:flex" />
         {/* Footer attribution */}
         <div className="py-4 text-center text-sm text-gray-500">
-          The Paddlelift India. Developed by{" "}
+          The Paddlelift India. Developed & Managed by{" "}
           <a
             href="https://www.linkedin.com/in/snehasish-mandal-" // Replace with Snehasish's LinkedIn profile
             target="_blank"
@@ -96,6 +96,15 @@ const Footer = () => {
             className="text-blue-500 hover:underline relative inline-block"
           >
             Mayank
+            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-blue-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+          </a>{" "}
+          {"| "}
+          <a
+            href="https://www.linkedin.com/in/rajat-singh-tomar-65727a185"
+            target="_blank"
+            className="text-blue-500 hover:underline relative inline-block"
+          >
+            Rajat
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-blue-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </a>{" "}
           . All rights reserved.
