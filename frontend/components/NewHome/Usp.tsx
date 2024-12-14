@@ -73,7 +73,7 @@ const ApproachSection: React.FC = () => {
       }}
       className="bg-[#09090B]"
     >
-      <div className="max-w-6xl mx-auto px-4 xl:px-0">
+      <div className="max-w-6xl mx-6 sm:mx-auto px-4 xl:px-0">
         {/* Section Header */}
         <motion.h2
           variants={{
