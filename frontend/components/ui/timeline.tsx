@@ -28,6 +28,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  const animationVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { ease: "easeInOut", duration: 0.6, delay: 0.2 },
+    },
+  };
+
   return (
     <div className="w-full text-white font-sans" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
@@ -64,10 +73,24 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-400">
                 {item.year}
               </h3>
-              <h3 className="block text-4xl mb-4 text-left font-bold text-neutral-400">
+              <motion.h3
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={animationVariants}
+                className="block text-4xl mb-4 text-left font-bold text-neutral-400"
+              >
                 {item.title}
-              </h3>
-              {item.content}{" "}
+              </motion.h3>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={animationVariants}
+                className="text-left"
+              >
+                {item.content}
+              </motion.div>
             </div>
           </div>
         ))}

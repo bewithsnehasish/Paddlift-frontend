@@ -1,7 +1,11 @@
+"use client";
+
 import React from "react";
 import { PhoneCall } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 interface ApproachStep {
   number: number;
@@ -32,26 +36,87 @@ const APPROACH_STEPS: ApproachStep[] = [
     number: 4,
     title: "Personalized Approach",
     description:
-      "We do not just only provide candidates, we promotes customer’s branding amongst the market and pull out crème who will be eligible to get hired.",
+      "We do not just only provide candidates, we promotes customer's branding amongst the market and pull out crème who will be eligible to get hired.",
   },
 ];
 
 const ApproachSection: React.FC = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
-    <div className="bg-[#09090B]">
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.6,
+            ease: "easeOut",
+            delayChildren: 0.3,
+            staggerChildren: 0.2,
+          },
+        },
+      }}
+      className="bg-[#09090B]"
+    >
       <div className="max-w-6xl mx-auto px-4 xl:px-0">
         {/* Section Header */}
-        <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white max-w-2xl leading-[110%]">
+        <motion.h2
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.6 },
+            },
+          }}
+          className="text-5xl md:text-6xl font-bold mb-4 text-white max-w-2xl leading-[110%]"
+        >
           What Sets Us <span className="text-teal-400">Apart</span>
-        </h2>
-        <p className="text-white text-xl font-semibold md:text-base my-4 pb-5 max-w-lg">
+        </motion.h2>
+
+        <motion.p
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.6, delay: 0.2 },
+            },
+          }}
+          className="text-white text-xl font-semibold md:text-base my-4 pb-5 max-w-lg"
+        >
           Why you should choose us over the competition.
-        </p>
+        </motion.p>
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Image Section */}
-          <div className="order-2 md:order-1 w-full h-full">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: {
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 0.6, delay: 0.4 },
+              },
+            }}
+            className="order-2 md:order-1 w-full h-full"
+          >
             <div className="w-full h-full min-h-[400px] max-h-[600px]">
               <Image
                 src="/USP.avif"
@@ -61,14 +126,34 @@ const ApproachSection: React.FC = () => {
                 height={600}
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* Timeline Section */}
-          <div className="order-1 md:order-2">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.1,
+                  delayChildren: 0.5,
+                },
+              },
+            }}
+            className="order-1 md:order-2"
+          >
             <div className="space-y-6">
               {APPROACH_STEPS.map((step) => (
-                <div
+                <motion.div
                   key={step.number}
+                  variants={{
+                    hidden: { opacity: 0, x: -50 },
+                    visible: {
+                      opacity: 1,
+                      x: 0,
+                      transition: { duration: 0.5 },
+                    },
+                  }}
                   className="relative pl-12 pb-6 border-l-2 border-neutral-800 last:border-transparent"
                 >
                   <div className="absolute -left-5 top-0 bg-neutral-900 border-2 border-neutral-700 w-10 h-10 rounded-full flex items-center justify-center">
@@ -84,21 +169,33 @@ const ApproachSection: React.FC = () => {
                       {step.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
             {/* Call to Action */}
-            <Link href="/contact" className="mt-8">
-              <button className="group flex items-center gap-3 bg-yellow-400 text-neutral-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition-all">
-                <PhoneCall className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                Contact Us
-              </button>
-            </Link>
-          </div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.6, delay: 0.7 },
+                },
+              }}
+              className="mt-8"
+            >
+              <Link href="/contact" className="block">
+                <button className="group flex items-center gap-3 bg-yellow-400 text-neutral-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition-all">
+                  <PhoneCall className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  Contact Us
+                </button>
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
