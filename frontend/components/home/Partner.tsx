@@ -194,7 +194,7 @@ const partnerLogos = [
 ];
 const PartnersSection: React.FC = () => {
   return (
-    <section className="relative py-16 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-900 overflow-hidden">
+    <section className="relative py-16 bg-[#09090B] overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
         <div className="pb-4 md:pb-20">
           {/* Section header */}

@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     remotePatterns: [
       {
@@ -14,10 +13,19 @@ const nextConfig: NextConfig = {
         hostname: "picsum.photos",
         pathname: "/**", // Allow all paths from this domain
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**", // Allow all paths from this domain
+      },
     ],
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false, net: false, tls: false };
+    return config;
   },
 };
 

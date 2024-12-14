@@ -21,7 +21,7 @@ export default function HeroSection() {
       />
 
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-background z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-teal-400/10 to-background z-0" />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -47,9 +47,9 @@ export default function HeroSection() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link className="font-black " href="/services">
+              <a className="font-black " href="#services">
                 Our Services
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
