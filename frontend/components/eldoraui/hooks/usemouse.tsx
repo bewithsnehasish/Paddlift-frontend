@@ -10,7 +10,7 @@ interface MouseState {
   elementPositionY: number | null;
 }
 
-export function useMouse(): [MouseState, RefObject<HTMLDivElement>] {
+export function useMouse(): [MouseState, RefObject<HTMLDivElement | null>] {
   const [state, setState] = useState<MouseState>({
     x: null,
     y: null,
@@ -29,7 +29,7 @@ export function useMouse(): [MouseState, RefObject<HTMLDivElement>] {
         y: event.pageY,
       };
 
-      if (ref.current instanceof Element) {
+      if (ref.current) {
         const { left, top } = ref.current.getBoundingClientRect();
         const elementPositionX = left + window.scrollX;
         const elementPositionY = top + window.scrollY;
