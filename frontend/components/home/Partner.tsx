@@ -217,7 +217,6 @@ const PartnersSection: React.FC = () => {
           <div className="relative overflow-hidden">
             <MarqueeRow logos={partnerLogos} direction="left" />
             <MarqueeRow logos={partnerLogos} direction="right" />
-            <MarqueeRow logos={partnerLogos} direction="left" />
           </div>
         </div>
       </div>
@@ -264,13 +263,13 @@ interface LogoCardProps {
 
 const LogoCard: React.FC<LogoCardProps> = ({ logo }) => {
   return (
-    <div className="group relative flex-shrink-0 w-48 h-48">
+    <div className="group relative flex-shrink-0 w-32 h-32">
       <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-indigo-200 to-gray-500"></div>
       <div className="relative z-10 h-full w-full flex items-center justify-center p-6">
         <Image
           src={logo.src}
           alt={logo.name}
-          className="max-h-36 max-w-36 object-contain group-hover:scale-110 transition-transform duration-300"
+          className="max-h-28 max-w-28 object-contain group-hover:scale-110 transition-transform duration-300"
           width={144}
           height={144}
         />

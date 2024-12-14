@@ -1,7 +1,7 @@
 import Image from "next/image";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
-import FeaturesImage from "@/public/images/features.png";
+import FeaturesImage from "@/public/images/USP.svg";
 
 export default function Features() {
   return (
@@ -41,12 +41,14 @@ export default function Features() {
             </div>
 
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              What Set Us Apart
+              What Sets Us Apart
             </h2>
             <p className="text-lg text-white">
-              Open AI reads and understands your files, and with nothing more
-              than a single line of feedback, so you can go further than the
-              speed of thought.
+              Our squad of seasoned specialists. With different team setups for
+              IT and non-IT needs, we are equipped with street-smart knowledge
+              and the know-how to serve our customers with swift turnaround
+              times. This makes us your gateway to top-tier talent that aligns
+              perfectly with your unique requirements.
             </p>
           </div>
           <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
@@ -78,7 +80,7 @@ export default function Features() {
               </h3>
               <p className="text-lg text-white">
                 Our squad of seasoned specialists, Tier 1 pedigree holders, 3
-                seasoned Co-Founders with combined 45+ years of product HR &
+                seasoned Co-Founders with combined 65+ years of product HR &
                 recruitment expertise.
               </p>
             </article>

@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Gilroy"; /* This is the name you'll use to reference the font */
+  src:
+    url("/fonts/GilroyHeavy.otf") format("opentype"),
+    url("/fonts/GilroyHeavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
  
 @layer base {
   :root {
@@ -113,3 +122,6 @@
 
 
 
+*{
+  font-family: 'Gilroy', sans-serif;
+}

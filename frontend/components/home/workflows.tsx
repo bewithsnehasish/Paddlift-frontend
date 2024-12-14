@@ -14,7 +14,7 @@ export default function Workflows() {
           <div className="mx-auto max-w-3xl pb-8 text-center pt-12 md:pb-16">
             <div className="inline-flex items-center gap-3 pb-3 max-w-full justify-center before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
               <span className="inline-flex bg-gradient-to-r from-pink-500 to-indigo-500 bg-clip-text text-base sm:text-xl font-bold text-transparent">
-                Unlocking Potential, Together
+                Unleashing Potential, Together
               </span>
             </div>
 
@@ -22,10 +22,10 @@ export default function Workflows() {
               What We Do
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-cyan-200 px-4">
-              At PaddeLift, we're dedicated to connecting businesses with top
-              talent and empowering individuals to achieve their career goals.
-              Whether you're building a team or shaping your future, we're here
-              to support every step of the journey.
+              At PaddleLift, we are dedicated to empowering businesses with top
+              talent and energizing individuals to excel in their careers.
+              Whether you&apos;re building a team or shaping your future,
+              we&apos;re here to support every step of the journey
             </p>
           </div>
 
@@ -36,14 +36,14 @@ export default function Workflows() {
               image={WorflowImg01}
               alt="Workflow 01"
               tag="Recruitment"
-              description="Delivering top talent across industries and skill sets, from tech to non-tech, with precision and expertise."
+              description="Simplifying the recruitment journey, ensuring efficient and effective talent acquisition"
             />
             {/* Card 2 */}
             <WorkflowCard
               image={WorflowImg02}
               alt="Workflow 02"
               tag="Staffing"
-              description="Deploying skilled talent globally with seamless payroll management for efficient staffing solutions globally."
+              description="Deploying skilled talent globally with seamless payroll management for efficient and compliant staffing solutions."
             />
             {/* Card 3 */}
             <WorkflowCard
@@ -57,7 +57,7 @@ export default function Workflows() {
               image={WorflowImg03}
               alt="Workflow 04"
               tag="HR Dynamics"
-              description="Comprehensive HR management service that streamlines policy, strategies, salary benchmarking, and analytics support."
+              description="Comprehensive HR management service that streamlines policy, strategies, salary benchmarking, and different analytics support."
             />
           </Spotlight>
         </div>

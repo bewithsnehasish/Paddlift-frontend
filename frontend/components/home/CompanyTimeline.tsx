@@ -1,4 +1,5 @@
 import { Timeline } from "../ui/timeline";
+import "../../app/globals.css";
 
 export default function CompanyTimeline() {
   return (
