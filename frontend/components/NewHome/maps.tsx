@@ -47,7 +47,7 @@ export default function WorldMapSection() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-5xl md:text-6xl font-bold mb-4 text-white max-w-2xl leading-[110%]"
       >
-        World <span className="text-teal-400">Map</span>
+        Operations Around the <span className="text-teal-400">World</span>
       </motion.h2>
 
       <motion.p
