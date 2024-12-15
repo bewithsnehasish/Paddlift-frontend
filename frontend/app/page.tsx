@@ -7,6 +7,7 @@ import ApproachSection from "@/components/NewHome/Usp";
 import PartnersSection from "@/components/home/Partner";
 import OrganizationalStructure from "@/components/NewHome/organisationstructure";
 import WorldMapSection from "@/components/NewHome/maps";
+import Testimonials from "@/components/NewHome/Testimonials";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <OrganizationalStructure />
       <WorldMapSection />
       <PartnersSection />
+      <Testimonials />
     </div>
   );
 }
