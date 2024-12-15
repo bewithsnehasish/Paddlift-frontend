@@ -65,15 +65,17 @@ export default function WorldMapSection() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        transition={{ duration: 0.2, delay: 0.1 }}
         className="w-full max-w-4xl mx-auto mb-6"
       >
         <Image
-          src="/images/maps.svg"
+          src="/images/maps.webp"
           alt="World Map"
           className="w-full h-auto object-contain"
           width={1200}
           height={800}
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBzdHlsZT0iIiBmaWxsPSIjZmZmIiAvPgo="
         />
       </motion.div>
 
