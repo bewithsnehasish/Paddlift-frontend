@@ -88,11 +88,11 @@ const Navbar = () => {
                 className="font-normal flex space-x-2 items-center text-sm mr-4 text-black px-2 py-1 relative z-20"
               >
                 <Image
-                  src="/Paddlelite Logo.png"
+                  src="/Plogo.png"
                   alt="Paddlelite Logo"
                   className="max-h-24 max-w-24 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
-                  width={64}
-                  height={64}
+                  width={84}
+                  height={84}
                 />
                 <span className="text-white text-2xl font-extrabold">
                   PaddleLift
