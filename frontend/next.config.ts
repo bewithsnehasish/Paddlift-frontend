@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "picsum.photos",
+        hostname: "drive.google.com",
         pathname: "/**", // Allow all paths from this domain
       },
       {

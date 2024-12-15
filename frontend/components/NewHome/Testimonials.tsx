@@ -10,7 +10,7 @@ const testimonialsData = [
     name: "Sandeep Kumar",
     title: "AVP – Human Resources | Otipy",
     avatar:
-      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+      "https://drive.google.com/thumbnail?id=1WroSFIWOIzZUMdC57vLj91JbM2DlvYSq&sz=s4000",
   },
   {
     quote:
@@ -18,7 +18,7 @@ const testimonialsData = [
     name: "Mrinal Pallial",
     title: "Sr. HR – Business Partner | ITC",
     avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+      "https://drive.google.com/thumbnail?id=1Pnx_7YkewgEdmR4K9VX0NLb5-nqlbAzl&sz=s4000",
   },
   {
     quote:
@@ -26,7 +26,7 @@ const testimonialsData = [
     name: "Mayank Bhawsinghka",
     title: "Founder & CEO | Nirmaan e-store",
     avatar:
-      "https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80",
+      "https://drive.google.com/thumbnail?id=1MxN--Xo2WEhFUM_ePZi5hmYSDz6gfQKe&sz=s4000",
   },
 ];
 
