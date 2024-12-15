@@ -17,10 +17,10 @@ export default function Home() {
       <Workflows />
       <PartnersSection />
         <Features />
+        <CompanyTimeline />
         */}
 
       <FeaturesSection />
-      <CompanyTimeline />
       <div className="min-h-screen p-6">
         <VisitorsCard />
       </div>
