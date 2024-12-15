@@ -47,9 +47,9 @@ export default function HeroSection() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a className="font-black " href="#services">
-                Our Services
-              </a>
+              <Link className="font-black " href="/contact">
+                Contact Us
+              </Link>
             </Button>
           </div>
         </div>

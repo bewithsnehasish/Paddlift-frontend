@@ -18,7 +18,7 @@ const YearGrowthCard: React.FC = () => {
     if (typeof window !== "undefined") {
       setChartData({
         chart: { type: "area", height: 350, toolbar: { show: false } },
-        series: [{ name: "Yearly Growth", data: [0, 161, -18, 8, 42] }],
+        series: [{ name: "Yearly Growth", data: [0, 161, 143, 151, 193] }],
         xaxis: {
           categories: ["2020", "2021", "2022", "2023", "2024"],
           labels: { style: { colors: "#9ca3af", fontSize: "20px" } },
@@ -103,31 +103,31 @@ const YearGrowthCard: React.FC = () => {
             year: "2020",
             label: "Inception Year",
             bg: "bg-orange-300",
-            text: "text-orange-900",
+            text: "text-[#09090B]",
           },
           {
             year: "2021",
             label: "161% Growth",
             bg: "bg-green-300",
-            text: "text-green-900",
+            text: "text-[#09090B]",
           },
           {
             year: "2022",
             label: "-18% Dip",
             bg: "bg-red-300",
-            text: "text-red-900",
+            text: "text-[#09090B]",
           },
           {
             year: "2023",
             label: "8% Growth",
             bg: "bg-blue-200",
-            text: "text-blue-700",
+            text: "text-[#09090B]",
           },
           {
             year: "2024",
             label: "42% Anticipated",
             bg: "bg-teal-300",
-            text: "text-teal-700",
+            text: "text-[#09090B]",
           },
         ].map(({ year, label, bg, text }) => (
           <motion.div

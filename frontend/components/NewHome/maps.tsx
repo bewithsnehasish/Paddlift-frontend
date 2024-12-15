@@ -28,11 +28,11 @@ export default function WorldMapSection() {
   }, []);
 
   const growthData = [
-    { year: "Australia", color: "bg-orange-300 text-orange-900" },
-    { year: "India", color: "bg-green-300 text-green-900" },
-    { year: "Europe", color: "bg-red-300 text-red-900" },
-    { year: "Africa", color: "bg-blue-200 text-blue-700" },
-    { year: "Middle East", color: "bg-yellow-300 text-yellow-900" },
+    { year: "Australia", color: "bg-orange-300 text-[#09090B]" },
+    { year: "India", color: "bg-green-300 text-[#09090B]" },
+    { year: "Europe", color: "bg-red-300 text-[#09090B]" },
+    { year: "Africa", color: "bg-blue-200 text-[#09090B]" },
+    { year: "Middle East", color: "bg-yellow-300 text-[#09090B]" },
   ];
 
   return (
@@ -56,8 +56,9 @@ export default function WorldMapSection() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="text-white text-xl font-semibold md:text-base my-4 max-w-lg"
       >
-        We've successfully worked with clients across various regions, expanding
-        our global footprint and delivering exceptional services worldwide.
+        We&apos;ve successfully worked with clients across various regions,
+        expanding our global footprint and delivering exceptional services
+        worldwide.
       </motion.p>
 
       {/* World Map */}
