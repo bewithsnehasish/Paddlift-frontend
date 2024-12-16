@@ -99,9 +99,6 @@ const Navbar = () => {
                   width={84}
                   height={84}
                 />
-                <span className="text-white text-2xl font-extrabold">
-                  PaddleLift
-                </span>
               </Link>
               <div className="flex items-center gap-1.5">
                 {navLinks.slice(1).map((link) => (

@@ -28,11 +28,11 @@ export default function WorldMapSection() {
   }, []);
 
   const growthData = [
-    { year: "Australia", color: "bg-orange-300 text-[#09090B]" },
-    { year: "India", color: "bg-green-300 text-[#09090B]" },
-    { year: "Europe", color: "bg-red-300 text-[#09090B]" },
-    { year: "Africa", color: "bg-blue-200 text-[#09090B]" },
-    { year: "Middle East", color: "bg-yellow-300 text-[#09090B]" },
+    { year: "Australia", color: "bg-[#f9b600] text-[#09090B]" },
+    { year: "India", color: "bg-[#029081] text-[#09090B]" },
+    { year: "Europe", color: "bg-[#ef1f5b] text-[#09090B]" },
+    { year: "Africa", color: "bg-[#0065e1] text-[#09090B]" },
+    { year: "Middle East", color: "bg-[#eff610] text-[#09090B]" },
   ];
 
   return (
