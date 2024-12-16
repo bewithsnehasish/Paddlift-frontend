@@ -66,11 +66,12 @@ export default function WorldMapSection() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
         transition={{ duration: 0.2, delay: 0.1 }}
-        className="w-full max-w-4xl mx-auto mb-6"
+        className="w-full max-w-7xl mx-auto mb-6"
       >
         <Image
-          src="/images/maps.webp"
+          src="/images/map.gif"
           alt="World Map"
+          unoptimized
           className="w-full h-auto object-contain"
           width={1200}
           height={800}

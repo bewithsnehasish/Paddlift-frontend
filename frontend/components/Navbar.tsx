@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,8 +65,11 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Our Services", path: "/services" },
+    { name: "Expertise", path: "/expertise" },
+    { name: "Portfolio", path: "/portfolio" },
     { name: "Contact", path: "/contact" },
-    { name: "Job List", path: "/jobs" },
   ];
 
   return (
@@ -110,6 +115,16 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="m-auto" asChild>
+                <Link
+                  className="text-xl text-white font-black [text-shadow:_0_0_2px_rgba(0,0,0,0.75)]"
+                  href="/jobs"
+                >
+                  Job Board <ArrowRight className="ml-2" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -129,6 +144,7 @@ const Navbar = () => {
               />
               <span className="text-white font-bold">PaddleLift</span>
             </Link>
+
             <button onClick={toggleMobileMenu} className="text-white h-6 w-6">
               <svg
                 stroke="currentColor"

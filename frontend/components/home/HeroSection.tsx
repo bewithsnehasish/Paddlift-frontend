@@ -31,24 +31,19 @@ export default function HeroSection() {
       >
         <div className="max-w-2xl">
           <TextGenerateEffect
-            words="Elevate Your Recruitment Strategy with Paddlelift"
+            words="From Seed to Scale, We Fuel Your Journey"
             className="text-4xl md:text-6xl font-bold mb-6"
           />
           <p className="text-xl text-muted-foreground mb-8">
-            Connecting Top Talent Globally - From Startups to Enterprises.....
+            Tailor made solutions for Startups to Enterprises....
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" asChild>
               <Link
                 className="text-xl text-white font-black [text-shadow:_0_0_2px_rgba(0,0,0,0.75)]"
-                href="/jobs"
+                href="/contact"
               >
-                Explore Jobs <ArrowRight className="ml-2" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link className="font-black " href="/contact">
-                Contact Us
+                Connect Us <ArrowRight className="ml-2" />
               </Link>
             </Button>
           </div>

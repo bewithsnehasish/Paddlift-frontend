@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
         pathname: "/**", // Allow all paths from this domain
       },
+      {
+        protocol: "https",
+        hostname: "iili.io",
+        pathname: "/**", // Allow all paths from this domain
+      },
     ],
   },
   eslint: {
