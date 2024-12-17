@@ -1,8 +1,5 @@
-// app/layout.tsx
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import ClientLoading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,15 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
         className={`${inter.className} font-inter text-base text-gray-200 antialiased`}
       >
-        <div className="fixed inset-0 z-[-1]"></div>
         <ClientLoading>
-          <Navbar />
           <main>{children}</main>
-          <Footer />
         </ClientLoading>
       </body>
     </html>
