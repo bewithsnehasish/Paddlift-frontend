@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { BackgroundLines } from "@/components/ui/background-lines";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const MaintenancePage: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const MaintenancePage: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        {/* Logo and Site Name - Responsive Flex */}
+        {/* Logo and Site Name */}
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8 sm:mb-12">
           <div className="w-20 h-20 sm:w-24 sm:h-24 relative">
             <Image
@@ -29,29 +30,16 @@ const MaintenancePage: React.FC = () => {
           </h1>
         </div>
 
-        {/* Maintenance Icon - Responsive Size */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-24 w-24 sm:h-32 sm:w-32 mx-auto text-yellow-400 mb-6 animate-spin-slow"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+        {/* Lottie Animation */}
+        <div className="h-60 sm:h-56 lg:h-64 w-full flex justify-center items-center mb-6">
+          <DotLottieReact
+            src="https://lottie.host/1023e8ac-8cea-4a7b-b2e7-9ad5418c6dce/uRGfIOl3q1.lottie"
+            loop
+            autoplay
           />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
+        </div>
 
-        {/* Maintenance Text - Responsive Typography */}
+        {/* Maintenance Text */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
           Site Under Maintenance
         </h2>
@@ -70,7 +58,7 @@ const MaintenancePage: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Footer - Responsive Positioning and Text */}
+      {/* Footer */}
       <motion.div
         className="absolute bottom-4 text-xs sm:text-sm opacity-75 text-center w-full px-4"
         initial={{ opacity: 0 }}
